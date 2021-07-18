@@ -9,5 +9,14 @@
         android:id="@+id/menuFragment"
         android:name="gr.sbozikas.utopiaengine.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_wildernessFragment"
+            app:destination="@id/wildernessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wildernessFragment"
+        android:name="gr.sbozikas.utopiaengine.WildernessFragment"
+        android:label="fragment_wilderness"
+        tools:layout="@layout/fragment_wilderness" />
 </navigation>
