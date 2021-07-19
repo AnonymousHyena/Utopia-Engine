@@ -22,9 +22,6 @@ class MenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        view.findViewById<Button>(R.id.new_game_button).setOnClickListener { view: View ->
-//            Navigation.findNavController(view).navigate(R.id.action_menuFragment_to_wildernessFragment)
-//        }
         view.findViewById<Button>(R.id.new_game_button).setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_menuFragment_to_wildernessFragment)
         )

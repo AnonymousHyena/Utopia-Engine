@@ -31,52 +31,53 @@
             app:layout_constraintTop_toTopOf="@+id/halebeard_peak" />
 
         <RadioGroup
-            android:id="@+id/radioGroup"
+            android:id="@+id/hp_days"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/halebeard_peak"
             app:layout_constraintEnd_toEndOf="@+id/halebeard_peak">
 
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/hp_day_1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:layout_weight="1" />
 
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/hp_day_2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:layout_weight="1" />
 
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/hp_day_3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:layout_weight="1" />
 
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/hp_day_4"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:layout_weight="1" />
 
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/hp_day_5"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:layout_weight="1" />
 
-            <RadioButton
-                android:id="@+id/radioButton6"
-                android:layout_width="match_parent"
+            <CheckBox
+                android:id="@+id/hp_day_6"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="" />
+                android:layout_weight="1" />
+
         </RadioGroup>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/hp_construct_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/construct_seal_of_balance"
@@ -84,20 +85,51 @@
             app:layout_constraintTop_toBottomOf="@+id/halebeard_peak" />
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/hp_component_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/component_silver"
             app:layout_constraintEnd_toEndOf="@+id/halebeard_peak"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/hp_construct_info" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/hp_treasure_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/treasure_ice_plate"
             app:layout_constraintEnd_toEndOf="@+id/halebeard_peak"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintTop_toBottomOf="@+id/hp_component_info" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hp_treasure_info">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TextView" />
+            </TableRow>
+
+        </TableLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>
