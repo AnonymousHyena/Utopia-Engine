@@ -19,4 +19,7 @@
     <string name="ruined_city_of_the_ancients">Ruined City of the Ancients</string>
     <string name="the_fiery_maw">The Fiery Maw</string>
 
+    <string name="minus_one">-1</string>
+    <string name="box_hint">1-6</string>
+
 </resources>

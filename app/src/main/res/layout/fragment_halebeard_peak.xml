@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HalebeardPeakFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wilderness_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/halebeard_peak_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/halebeard_peak"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/hp_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/halebeard_peak_title"
+            app:layout_constraintStart_toEndOf="@+id/halebeard_peak_title"
+            app:layout_constraintTop_toTopOf="@+id/halebeard_peak_title" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/minus_one"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/hp_days"
+            app:layout_constraintStart_toStartOf="@+id/hp_days"
+            app:layout_constraintTop_toTopOf="@+id/hp_days" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:text="@string/minus_one"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/hp_days"
+            app:layout_constraintStart_toStartOf="@+id/hp_days"
+            app:layout_constraintTop_toTopOf="@+id/hp_days" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:text="@string/minus_one"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/hp_days"
+            app:layout_constraintStart_toStartOf="@+id/hp_days"
+            app:layout_constraintTop_toTopOf="@+id/hp_days" />
+
+        <RadioGroup
+            android:id="@+id/hp_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/halebeard_peak_title"
+            app:layout_constraintEnd_toEndOf="@+id/halebeard_peak_title">
+
+            <CheckBox
+                android:id="@+id/hp_day_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/hp_day_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/hp_day_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/hp_day_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/hp_day_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:id="@+id/hp_day_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/hp_construct_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/construct_seal_of_balance"
+            app:layout_constraintEnd_toEndOf="@+id/halebeard_peak_title"
+            app:layout_constraintTop_toBottomOf="@+id/halebeard_peak_title" />
+
+        <TextView
+            android:id="@+id/hp_component_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/component_silver"
+            app:layout_constraintEnd_toEndOf="@+id/halebeard_peak_title"
+            app:layout_constraintTop_toBottomOf="@+id/hp_construct_info" />
+
+        <TextView
+            android:id="@+id/hp_treasure_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/treasure_ice_plate"
+            app:layout_constraintEnd_toEndOf="@+id/halebeard_peak_title"
+            app:layout_constraintTop_toBottomOf="@+id/hp_component_info" />
+
+        <TableLayout
+            android:id="@+id/hp_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hp_treasure_info">
+
+            <TableRow
+                android:id="@+id/hp_1_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_1_top_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_1_top_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_1_top_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hp_1_bot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_1_bot_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_1_bot_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_1_bot_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/hp_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/hp_3"
+            app:layout_constraintStart_toEndOf="@+id/hp_1"
+            app:layout_constraintTop_toBottomOf="@+id/hp_treasure_info">
+
+            <TableRow
+                android:id="@+id/hp_2_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_2_top_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_2_top_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_2_top_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hp_2_bot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_2_bot_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_2_bot_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_2_bot_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/hp_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hp_treasure_info">
+
+            <TableRow
+                android:id="@+id/hp_3_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_3_top_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_3_top_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_3_top_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hp_3_bot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_3_bot_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_3_bot_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_3_bot_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/hp_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hp_1">
+
+            <TableRow
+                android:id="@+id/hp_4_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_4_top_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_4_top_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_4_top_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hp_4_bot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_4_bot_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_4_bot_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_4_bot_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/hp_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toStartOf="@+id/hp_6"
+            app:layout_constraintStart_toEndOf="@+id/hp_4"
+            app:layout_constraintTop_toBottomOf="@+id/hp_2">
+
+            <TableRow
+                android:id="@+id/hp_5_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_5_top_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_5_top_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_5_top_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hp_5_bot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_5_bot_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_5_bot_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_5_bot_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:id="@+id/hp_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hp_3">
+
+            <TableRow
+                android:id="@+id/hp_6_top"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_6_top_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_6_top_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_6_top_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hp_6_bot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/hp_6_bot_1"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_6_bot_2"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+
+                <EditText
+                    android:id="@+id/hp_6_bot_3"
+                    style="@style/single_digit_box"
+                    android:autofillHints="0"
+                    android:hint="@string/box_hint" />
+            </TableRow>
+
+        </TableLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

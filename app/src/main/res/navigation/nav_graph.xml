@@ -18,5 +18,14 @@
         android:id="@+id/wildernessFragment"
         android:name="gr.sbozikas.utopiaengine.WildernessFragment"
         android:label="fragment_wilderness"
-        tools:layout="@layout/fragment_wilderness" />
+        tools:layout="@layout/fragment_wilderness" >
+        <action
+            android:id="@+id/action_wildernessFragment_to_halebeardPeakFragment2"
+            app:destination="@id/halebeardPeakFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/halebeardPeakFragment2"
+        android:name="gr.sbozikas.utopiaengine.HalebeardPeakFragment"
+        android:label="fragment_halebeard_peak"
+        tools:layout="@layout/fragment_halebeard_peak" />
 </navigation>

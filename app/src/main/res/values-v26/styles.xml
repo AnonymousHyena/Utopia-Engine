@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="single_digit_box">
+        <item name="android:layout_width">30sp</item>
+        <item name="android:layout_height">35sp</item>
+        <item name="android:autofillHints">0</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+</resources>

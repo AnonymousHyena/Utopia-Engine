@@ -7,129 +7,69 @@
     tools:context=".WildernessFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wilderness_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/halebeard_peak"
+        <Button
+            android:id="@+id/hp_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="175dp"
             android:text="@string/halebeard_peak"
-            android:textSize="35sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <CheckBox
-            android:id="@+id/hp_checkBox"
+        <Button
+            android:id="@+id/tgw_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            app:layout_constraintBottom_toBottomOf="@+id/halebeard_peak"
-            app:layout_constraintStart_toEndOf="@+id/halebeard_peak"
-            app:layout_constraintTop_toTopOf="@+id/halebeard_peak" />
-
-        <RadioGroup
-            android:id="@+id/hp_days"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/halebeard_peak"
-            app:layout_constraintEnd_toEndOf="@+id/halebeard_peak">
-
-            <CheckBox
-                android:id="@+id/hp_day_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <CheckBox
-                android:id="@+id/hp_day_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <CheckBox
-                android:id="@+id/hp_day_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <CheckBox
-                android:id="@+id/hp_day_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <CheckBox
-                android:id="@+id/hp_day_5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-            <CheckBox
-                android:id="@+id/hp_day_6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
-
-        </RadioGroup>
-
-        <TextView
-            android:id="@+id/hp_construct_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/construct_seal_of_balance"
-            app:layout_constraintEnd_toEndOf="@+id/halebeard_peak"
-            app:layout_constraintTop_toBottomOf="@+id/halebeard_peak" />
-
-        <TextView
-            android:id="@+id/hp_component_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/component_silver"
-            app:layout_constraintEnd_toEndOf="@+id/halebeard_peak"
-            app:layout_constraintTop_toBottomOf="@+id/hp_construct_info" />
-
-        <TextView
-            android:id="@+id/hp_treasure_info"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/treasure_ice_plate"
-            app:layout_constraintEnd_toEndOf="@+id/halebeard_peak"
-            app:layout_constraintTop_toBottomOf="@+id/hp_component_info" />
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/the_great_wilds"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hp_treasure_info">
+            app:layout_constraintTop_toBottomOf="@+id/hp_menu_button" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <Button
+            android:id="@+id/rsm_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/root_strangled_marshes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tgw_menu_button" />
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
+        <Button
+            android:id="@+id/gc_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/glassrock_canyon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rsm_menu_button" />
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <Button
+            android:id="@+id/rca_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/ruined_city_of_the_ancients"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gc_menu_button" />
 
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </TableRow>
-
-        </TableLayout>
-
+        <Button
+            android:id="@+id/tfm_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/the_fiery_maw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rca_menu_button" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </FrameLayout>

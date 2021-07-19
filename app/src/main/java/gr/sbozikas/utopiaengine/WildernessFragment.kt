@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.Navigation
 
 class WildernessFragment : Fragment() {
 
@@ -16,11 +18,12 @@ class WildernessFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_wilderness, container, false)
     }
 
-//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//        view.findViewById<Button>(R.id.button_first).setOnClickListener {
-//            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-//        }
-//    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        view.findViewById<Button>(R.id.hp_menu_button).setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_wildernessFragment_to_halebeardPeakFragment2)
+        )
+
+    }
 }
